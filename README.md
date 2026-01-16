@@ -6,7 +6,7 @@
 
 ## 🎥 Evidence
 
-![Facebook](https://raw.githubusercontent.com/shajon-dev/iOS-Facebook-SSL-Pinning-Bypass/refs/heads/main/asstes/v542.jpg)
+![Facebook](https://raw.githubusercontent.com/shajon-dev/iOS-Facebook-SSL-Pinning-Bypass/refs/heads/main/assets/v542.jpg)
 
 
 ## Other Apps
