@@ -1,0 +1,25 @@
+name: Mirror to SHAJON-404
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Required for mirror
+
+      - name: Push to SHAJON-404
+        run: |
+          # Configure git to ignore permission checks for the workspace (safety fix)
+          git config --global --add safe.directory '*'
+          
+          # Add remote using ONLY the token for auth (more robust)
+          git remote add mirror "https://${{ secrets.MIRROR_TOKEN }}@github.com/SHAJON-404/iOS-Facebook-SSL-Pinning-Bypass.git"
+          
+          # Push
+          git push --mirror mirror
