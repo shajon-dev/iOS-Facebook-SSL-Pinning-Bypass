@@ -19,7 +19,7 @@ jobs:
           git config --global --add safe.directory '*'
           
           # Add remote using ONLY the token for auth (more robust)
-          git remote add mirror "https://${{ secrets.MIRROR_TOKEN }}@github.com/SHAJON-404/iOS-Facebook-SSL-Pinning-Bypass.git"
+          git remote add mirror "https://SHAJON-404:${{ secrets.MIRROR_TOKEN }}@github.com/SHAJON-404/iOS-Facebook-SSL-Pinning-Bypass.git"
           
           # Push
           git push --mirror mirror
